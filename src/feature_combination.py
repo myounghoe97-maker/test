@@ -205,7 +205,7 @@ def evaluate(
         selected_groups,
     )
 
-    print(f"Feature count: {X_train.shape[1]}")
+    print(f"Feature count: {X_train.shape[-1]}")
 
     scaler = StandardScaler()
 
@@ -255,7 +255,7 @@ def evaluate(
 
     result = {
         "name": name,
-        "features": X_train.shape[1],
+        "features": X_train.shape[-1],
         "accuracy": accuracy_score(
             y_val,
             predictions,
